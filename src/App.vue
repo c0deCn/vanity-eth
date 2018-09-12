@@ -199,11 +199,7 @@
                 // Fathom - simple website analytics - https://github.com/usefathom/fathom
             },
             checkLocation() {
-                try {
-                    this.error = window.self !== window.top ? 'insecure_location' : this.error;
-                } catch (e) {
-                    this.error = 'insecure_location';
-                }
+
                 const hostname = window.location.hostname;
                 if (hostname && ['localhost', '127.0.0.1', 'ethbb.com'].indexOf(hostname) === -1) {
                     this.error = 'insecure_location';

@@ -1,12 +1,12 @@
 <template>
     <div class="panel">
-        <div>Difficulty: <span class="output" v-text="formatNum(difficulty)">1</span></div>
-        <div>Generated: <span class="output"
+        <div>难度: <span class="output" v-text="formatNum(difficulty)">1</span></div>
+        <div>已生成: <span class="output"
                               v-text="formatNum(count) + (count === 1 ? ' address' : ' addresses')">0 addresses</span>
         </div>
-        <div>50% probability: <span class="output" v-text="probability50">0 addresses</span></div>
-        <div>Speed: <span class="output" v-text="speed + ' addr/s'">0 addr/s</span></div>
-        <div>Status: <span class="output" v-text="status">Waiting</span></div>
+        <div>50% 几率: <span class="output" v-text="probability50">0 addresses</span></div>
+        <div>速度: <span class="output" v-text="speed + ' addr/s'">0 addr/s</span></div>
+        <div>状态: <span class="output" v-text="status">Waiting</span></div>
 
         <!--Probability-->
         <div class="probability">
@@ -14,7 +14,7 @@
         </div>
         <div class="percentage">
             <h4 v-text="probability + '%'">0%</h4>
-            <div>Probability</div>
+            <div>几率</div>
         </div>
     </div>
 </template>

@@ -1,16 +1,15 @@
 <template>
     <div class="panel">
         <p v-if="error === 'workers_unsupported'">
-            Your browser does not support multi-thread computation.<br>
-            Please use a different browser.
+            您的浏览器不支持多线程计算<br>
+            请使用其他浏览器，推荐谷歌.
         </p>
 
         <div v-if="error === 'insecure_location'">
-            <h3>Security alert</h3>
+            <h3>安全提醒</h3>
 
-            You are using Vanity-ETH from an unknown website, which could steal your private keys.<br>
-            To stay safe, use Vanity-ETH on <a href="https://vanity-eth.tk" target="_blank">vanity-eth.tk</a>, or
-            download the latest build <a href="https://git.io/veth-dl" target="_blank">here</a> to use offline.
+            您正在使用来自未知网站的CoinTool-ETH，这可能会窃取您的私钥.<br>
+            为了保持安全，请使用CoinToo-ETH <a href="https://ethbb.com" target="_blank">ethbb.com</a>
         </div>
         <p v-else v-html="error.replace('\n', '<br>')"></p>
     </div>

@@ -1,7 +1,7 @@
 <template>
     <div class="remodal" data-remodal-id="modal" data-remodal-options="hashTracking: false">
         <button data-remodal-action="close" class="remodal-close"></button>
-        <h3 class="title">Create encrypted keystore file (UTC / JSON)</h3>
+        <h3 class="title">创建 keystore file (UTC / JSON)文件</h3>
         <form @submit.prevent="save">
             <div>
                 <input class="hidden" type="text" autocomplete="username">
@@ -10,7 +10,7 @@
             </div>
             <div>
                 <button type="button" class="button-large" @click="save" :disabled="!password || !privateKey || loading"
-                        v-text="loading ? 'Generating...' : 'Download'"></button>
+                        v-text="loading ? '生成中...' : '下载'"></button>
             </div>
         </form>
     </div>

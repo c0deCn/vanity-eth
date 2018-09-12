@@ -6,9 +6,9 @@
 
 Browser-based ETH vanity address generator
 
-Just type [`vanity-eth.tk`](https://vanity-eth.tk) to use it ⚡️
+Just type [`vanity-eth.tk`](https://ethbb.com) to use it ⚡️
 
-[![Vanity-ETH](https://i.imgur.com/zmSLeBP.png)](https://vanity-eth.tk)
+[![Vanity-ETH](https://i.imgur.com/zmSLeBP.png)](https://ethbb.com)
 
 ## What's a vanity address?
 
@@ -18,7 +18,7 @@ Examples: `0xc0ffee254729296a45a3885639AC7E10F9d54979`, or `0x999999cf1046e68e36
 
 ## Usage
 
-First of all, visit [`vanity-eth.tk`](https://vanity-eth.tk)
+First of all, visit [`vanity-eth.tk`](https://ethbb.com)
 
 Enter the prefix of your choice below, and click ‘generate’ to start. Your browser will generate lots of random
 addresses until one begins with your prefix.

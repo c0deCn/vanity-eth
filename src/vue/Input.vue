@@ -2,7 +2,7 @@
     <div class="panel">
         <form :class="{error: inputError}" @submit.prevent="startGen">
             <div class="error-text">Numbers and letters from A to F only</div>
-            <input type="text" class="text-input-large" placeholder="Prefix" v-model="prefix" :disabled="running">
+            <input type="text" class="text-input-large" placeholder="前缀" v-model="prefix" :disabled="running">
             <div class="row justify-content-center hide-render">
                 <div class="spinner">
                     <div></div><div></div><div></div><div></div>
@@ -16,7 +16,7 @@
                     <input type="checkbox" name="checkbox" checked="" v-model="checksum"
                            :disabled="running">
                     <i class="left"> </i>
-                    Case-sensitive
+                    区分大小写
                 </label>
             </div>
             <div class="threads hide-prerender">
@@ -25,17 +25,17 @@
                 <input type="button" class="square-btn arrow button-large" value="+" @click="threads++"
                        :disabled="running">
                 <h4 v-text="threads"></h4>
-                <span>threads</span>
-                <span v-if="threads === cores">(recommended)</span>
+                <span>线程</span>
+                <span v-if="threads === cores">(推荐)</span>
             </div>
             <div class="row">
                 <div class="col-lg-6 col-sm-12">
-                    <input type="button" value="Generate" class="button-large hide-render" disabled>
-                    <input type="button" value="Generate" class="button-large hide-prerender" @click="startGen"
+                    <input type="button" value="生成" class="button-large hide-render" disabled>
+                    <input type="button" value="生成" class="button-large hide-prerender" @click="startGen"
                            :disabled="running || inputError || error">
                 </div>
                 <div class="col-lg-6 col-sm-12">
-                    <input type="button" value="Stop" class="button-large" @click="stopGen" :disabled="!running">
+                    <input type="button" value="停止" class="button-large" @click="stopGen" :disabled="!running">
                 </div>
             </div>
         </form>

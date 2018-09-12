@@ -1,9 +1,6 @@
 <template>
     <div id="app" class="remodal-bg render">
         <div class="container" id="content">
-            <!--Headline-->
-            <headline></headline>
-
             <!--Description-->
             <div class="row">
                 <div class="col-md-12">
@@ -43,29 +40,21 @@
         <!--Save modal-->
         <save :address="result.address.toLowerCase()" :private-key="result.privateKey"></save>
 
-        <!--Footer-->
-        <foot></foot>
-
-        <!--Github corner-->
-        <corner></corner>
     </div>
 </template>
 
 <script>
     import Worker from './js/vanity.js';
 
-    import Headline from './vue/Headline';
     import Description from './vue/Description';
     import Err from './vue/Error';
     import UserInput from './vue/Input';
     import Statistics from './vue/Statistics';
     import Result from './vue/Result';
     import Save from './vue/Save.vue';
-    import Corner from './vue/Corner';
-    import Foot from './vue/Footer';
 
     export default {
-        components: {Headline, Description, Err, UserInput, Statistics, Result, Save, Corner, Foot},
+        components: {Description, Err, UserInput, Statistics, Result, Save},
         data: function () {
             return {
                 running: false,
@@ -208,20 +197,6 @@
                     return; // No stats when coding
                 }
                 // Fathom - simple website analytics - https://github.com/usefathom/fathom
-                /* eslint-disable */
-                (function (f, a, t, h, o, m) {
-                    a[h] = a[h] || function () {
-                        (a[h].q = a[h].q || []).push(arguments);
-                    };
-                    o = f.createElement('script');
-                    m = f.getElementsByTagName('script')[0];
-                    o.async = 1;
-                    o.src = t;
-                    o.id = 'fathom-script';
-                    m.parentNode.insertBefore(o, m);
-                })(document, window, 'https://stats.vanity-eth.tk/tracker.js', 'fathom');
-                fathom('trackPageview');
-                /* eslint-enable */
             },
             checkLocation() {
                 try {
@@ -230,7 +205,7 @@
                     this.error = 'insecure_location';
                 }
                 const hostname = window.location.hostname;
-                if (hostname && ['localhost', '127.0.0.1', 'vanity-eth.tk'].indexOf(hostname) === -1) {
+                if (hostname && ['localhost', '127.0.0.1', 'ethbb.com'].indexOf(hostname) === -1) {
                     this.error = 'insecure_location';
                 }
             },

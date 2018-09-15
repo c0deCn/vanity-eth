@@ -234,7 +234,6 @@
         padding: 0
         font-family: 'Lato', sans-serif
         background: $bg-fallback
-        background: linear-gradient(140deg, $bg-2 0%, $bg-1 100%)
         background-attachment: fixed
         font-size: 16px
 
